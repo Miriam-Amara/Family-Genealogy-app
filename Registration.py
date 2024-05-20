@@ -278,12 +278,12 @@ class MotherRegistration(Registration):
 
     @property
     def child_name(self):
-    """
-    Gets the name of child
-    
-    Returns:
-        The name of child
-    """        
+        """
+        Gets the name of child
+        
+        Returns:
+            The name of child
+        """        
         return self._child_name
     
     
@@ -731,7 +731,7 @@ def initialize_child_reg(child):
     
 
     
-    def initialize_mother_reg(mother):
+def initialize_mother_reg(mother):
     """
     This function gets inputs from users (mothers) and passes each input to the corresponding setter method in the 
     MotherRegistration class.
@@ -876,12 +876,15 @@ def initialize_father_reg(father):
     
     
     
-if __name__ == "__main__":   
+if __name__ == "__main__": 
+    """Initializes registration for children in the family"""  
     child = ChildRegistration()
     initialize_child_reg(child)
     
+    """Initializes registration for mothers in the family"""
     mother = MotherRegistration()
     initialize_mother_reg(mother)
     
+    """Initializes registration for fathers in the family"""
     father = FatherRegistration()
-    initialize_mother_reg(mother)
+    initialize_father_reg(father)
